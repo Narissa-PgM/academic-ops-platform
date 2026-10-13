@@ -234,13 +234,13 @@ processes.
 
 ## Licence
 
-[Choose: MIT, CC-BY, or private]
+MIT
 
 ---
 
 ## Credits
 
-Created by [Your Name].
+Created by Narissara Khomkhai.
 
 Platform design, data model, and interface. Built with a single HTML
 file, vanilla JavaScript, and the FAS faculty extract as its evidence base.
