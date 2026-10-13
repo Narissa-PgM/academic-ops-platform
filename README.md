@@ -2,7 +2,7 @@
 
 A single-file web platform for Faculty Affairs operations at Harvard FAS.
 
-Built by [Your Name]. Demonstration build with synthesized sample data
+Built by Narissara Khomkhai. Demonstration build with synthesized sample data
 where real data is unavailable. Every figure is labelled by source.
 
 ---
