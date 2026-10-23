@@ -670,6 +670,54 @@ body.proposal{--bg:#f6f5f2;--ink:#192c37;--mute:#3f4c57;--line:#e3e5e2;--card:#f
 .pbinf-q b{display:block;margin-bottom:4px;font-size:15px}
 .pbinf-q p{margin:0;color:#627079;font-size:13.5px;line-height:1.45}
 @media(max-width:760px){.pbinf-q{grid-template-columns:1fr}}
+.rrcounts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.rrcounts button{text-align:left;background:#fff;border:1px solid var(--line,#e3e5e2);border-radius:12px;padding:12px 14px;color:inherit;cursor:pointer;font:inherit}
+.rrcounts button.on{border-color:#9d2235;box-shadow:inset 0 0 0 1px #9d2235}
+.rrcounts b{display:block;font:600 28px/1 Cambria,Georgia,serif;color:#192c37}
+.rrcounts span{display:block;margin-top:4px;color:#192c37;font-size:13px;font-weight:650}
+.rrcounts small{display:block;margin-top:2px;color:#627079;font-size:12px}
+.rrlayout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:16px;align-items:start}
+.rrheatwrap{overflow-x:auto}
+.rrheat{display:grid;gap:4px;min-width:520px}
+.rrrow{display:grid;grid-template-columns:108px repeat(5,minmax(0,1fr));gap:4px;align-items:stretch}
+.rrrow.rrhead div{font-size:11px;color:#627079;text-align:center;line-height:1.25;padding-bottom:4px}
+.rrlab{font-size:11px;color:#627079;display:flex;align-items:center;line-height:1.25}
+.rrcell{min-height:64px;border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.rrcell small{font-size:10px;opacity:.72}
+.rrcell button{border:0;background:#fff;border-radius:4px;padding:3px 6px;font:700 11px/1.3 ui-monospace,Menlo,Consolas,monospace;cursor:pointer;color:#192c37}
+.rrcell.in{background:#e7f5ee;color:#14532d}
+.rrcell.watch{background:#fbf3e4;color:#7c4a03}
+.rrcell.out{background:#f8d4d4;color:#7f1d1d}
+.rrcell.esc{background:#9d2235;color:#fff}
+.rrcell.esc small{color:#fff}
+.rrlegend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.rrlegend .rrcell{min-height:0;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex}
+.rrcards{display:grid;gap:12px}
+.rrcard{background:#fff;border:1px solid var(--line,#e3e5e2);border-radius:14px;padding:16px 18px}
+.rrcardhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.rrid{font:700 12px/1.3 ui-monospace,Menlo,Consolas,monospace;color:#9d2235;letter-spacing:.02em}
+.rrcard h3{margin:4px 0 0;font:600 20px/1.25 Cambria,Georgia,serif;color:#192c37}
+.rrscore{text-align:right;min-width:88px}
+.rrscore b{display:block;font:600 34px/1 Cambria,Georgia,serif;color:#192c37}
+.rrscore em{font-style:normal;font-size:12px;font-weight:700}
+.rrscore.esc b,.rrscore.esc em,.rrscore.out b,.rrscore.out em{color:#9d2235}
+.rrscore.watch b,.rrscore.watch em{color:#92672c}
+.rrscore.in b,.rrscore.in em{color:#14532d}
+.rrbow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
+.rrbow div{background:#f6f5f3;border-radius:8px;padding:10px 12px}
+.rrbow b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#627079;margin-bottom:4px}
+.rrbow p{margin:0;font-size:13.5px;line-height:1.45;color:#192c37}
+.rrmeta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#3d4f59;margin:0 0 8px}
+.rrdrop{font-size:13.5px;line-height:1.5;color:#3d4f59;margin:0 0 10px}
+.rrkri{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rrkri div{border:1px solid var(--line,#e3e5e2);border-radius:8px;padding:10px 12px}
+.rrkri b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#627079;margin-bottom:4px}
+.rrkri p{margin:0;font-size:13.5px;line-height:1.45;color:#192c37}
+.rracts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.rrnote{color:#627079;font-size:13px;line-height:1.45;margin:6px 0 0}
+.rrscale p{margin:0 0 10px;font-size:13.5px;line-height:1.5;color:#3d4f59}
+.rrscale b{color:#192c37}
+@media(max-width:900px){.rrcounts,.rrlayout,.rrbow,.rrkri{grid-template-columns:1fr}}
 
 .rmcontrols{display:flex;align-items:end;gap:16px;flex-wrap:wrap;margin:20px 0}.rmcontrols label{display:grid;gap:5px;font-size:11px;color:var(--mute)}.rmcontrols select{font:13px 'Segoe UI',sans-serif;padding:10px;border:1px solid var(--line);border-radius:6px;background:white;min-width:150px;max-width:260px}.rmcontext{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;color:var(--mute);margin:20px 0}.rmcontext b{color:var(--ink)}.rmtrack{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;margin:24px 0}.rmmonth{position:relative;border:1px solid var(--line);border-top:3px solid #d3dcd9;border-radius:6px;padding:14px 4px;text-align:center;background:white;color:var(--ink);min-width:0}.rmmonth b{font-size:13px;display:block}.rmmonth small{font-size:10px;color:var(--mute);display:block}.rmmonth span{display:block;font-size:12px;margin-top:12px}.rmmonth.now{border-top-color:#9d2235}.rmmonth.now:after{content:'NOW';font-size:8px;color:var(--crim);position:absolute;top:-17px;left:0;right:0;font-weight:700}.rmmonth.on{background:#f9eef0;border-color:#9d2235}.rmmonth:hover{border-color:#9d2235}.rmmilestone{display:grid;grid-template-columns:84px 1fr auto;align-items:center;gap:16px;text-align:left;border:0;border-bottom:1px solid var(--line);padding:17px 0;background:white;color:var(--ink);width:100%}.rmmilestone strong{font:21px Cambria,Georgia,serif}.rmmilestone b{font-size:14px;font-weight:600}.rmmilestone small{display:block;font-size:11px;color:var(--mute);margin-top:4px}.rmmilestone em{font-style:normal;font-size:11px;color:#417d75}.rmmilestone:hover b{color:var(--crim)}.rmpassed{color:var(--mute)!important}.rmstatus{display:inline-flex;gap:6px;align-items:center;font:11px 'Segoe UI',sans-serif;color:var(--mute);padding:4px 8px;background:var(--soft);border-radius:4px}.rmstatus:before{content:'';width:6px;height:6px;background:#a1a8aa;border-radius:50%}.rmstatus.active:before{background:#bf8832}.rmstatus.complete:before{background:#417d75}.rmfamilies{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rmfamily{background:white;border:1px solid var(--line);border-radius:8px;padding:20px;text-align:left;color:var(--ink)}.rmfamily h3{font:21px Cambria,Georgia,serif;margin:10px 0}.rmfamily p{color:var(--mute);font-size:12px;margin:0 0 14px}.rmfamily:hover{border-color:var(--crim)}.rmlegend{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;color:var(--mute)}.rmlegend span{display:flex;gap:6px;align-items:center}.rmlegend i{width:7px;height:7px;border-radius:50%;background:#417d75}.rmlegend span:nth-child(2) i{background:#bd9144}.rmlegend span:nth-child(3) i{background:#8d9ba0}.rmstep{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px 0;position:relative;border-bottom:1px solid var(--line)}.rmstep>span{display:grid;place-items:center;width:28px;height:28px;background:var(--soft);border:1px solid var(--line);border-radius:50%;font-size:11px}.rmstep.current>span{background:var(--crim);color:white;border-color:var(--crim)}.rmstep.done>span{background:#eaf2ef;color:#347363}.rmstep.current{background:#fcf5f6;padding-left:10px;border-left:3px solid var(--crim)}.rmstep b{font-size:13px}.rmstep small{display:block;font-size:11px;color:var(--mute);margin-top:3px}.rmstatebox{background:var(--soft);padding:15px;border-radius:7px;margin:16px 0}.rmstatebox select{max-width:100%;width:100%;padding:10px;margin:8px 0}.rmstatebox label{font-size:12px}.rmstatebox p{font-size:11px;color:var(--mute);margin:4px 0}.rmprocessnav{display:flex;gap:6px;margin:20px 0 12px;flex-wrap:wrap}.rmprocessnav button{border:1px solid var(--line);padding:8px 12px;background:white;border-radius:5px}.rmprocessnav button.on{color:var(--crim);background:#f9eef0;border-color:#e7c7cd}.rmcontacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.rmgroup{background:white;border:1px solid var(--line);border-radius:9px;padding:22px}.rmgroup h2{font:23px Cambria,Georgia,serif;margin:0 0 16px}.rmcontact{width:100%;padding:12px 0;text-align:left;border:0;border-top:1px solid var(--line);background:none;color:var(--ink);display:block}.rmcontact b{font-size:13px}.rmcontact small{font-size:11px;color:var(--mute);display:block;margin-top:4px}.rmcontact:hover b{color:var(--crim)}.rmgroup>p{font-size:11px;color:var(--mute)}.rmlinks{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.rmlinks a{font-size:13px;color:var(--crim)}.rmempty{padding:24px;color:var(--mute);font-size:13px;text-align:center}.rmsaved{color:#347363;font-size:12px}.rmdateinfo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.rmdateinfo div{padding:14px;background:var(--soft);border-radius:6px}.rmdateinfo small{display:block;color:var(--mute);font-size:11px}.rmdateinfo b{font-size:14px}
 @media(max-width:1050px){.rmtrack{grid-template-columns:repeat(6,1fr);row-gap:24px}.rmfamilies{grid-template-columns:1fr 1fr}}@media(max-width:760px){.rmtrack{grid-template-columns:repeat(4,1fr)}.rmcontacts,.rmfamilies{grid-template-columns:1fr}.rmcontrols{gap:10px}.rmcontrols select{min-width:125px}.rmmilestone{grid-template-columns:62px 1fr;gap:12px}.rmmilestone em{grid-column:2}.rmdateinfo{grid-template-columns:1fr}.rmgroup{padding:18px}.rmcontext{gap:8px 18px}.psnavlinks{scrollbar-width:thin}}
@@ -3700,16 +3748,52 @@ const DEPTS=REAL.DP.map((d,i)=>({i,n:d.n,o:d.o,div:d.div,L:d.L,N:d.N,V:d.V,w:d.w
 const DWT=(()=>{let a=0;return DEPTS.map(d=>a+=Math.max(1,d.L+d.N))})();
 const pickD=()=>{const r=rnd()*DWT[DWT.length-1];return Math.max(0,DWT.findIndex(x=>x>=r))};
 const WF=[
-{id:'src',n:'Faculty Search & Hiring',s:'Search',p:'SRC',w:.2,bn:3,st:[['Authorization',21,5],['Search Plan',28,2],['Posting & Outreach',45,1],['Committee Review',40,4],['Campus Visits',30,1],['Dean Approval',21,6],['Offer & Negotiation',25,5]]},
+{id:'src',n:'Faculty Search & Hiring',s:'Search',p:'HIR',w:.2,bn:3,st:[['Authorization',21,5],['Search Plan',28,2],['Posting & Outreach',45,1],['Committee Review',40,4],['Campus Visits',30,1],['Dean Approval',21,6],['Offer & Negotiation',25,5]]},
 {id:'ten',n:'Tenure Review (Asst → Assoc)',s:'Tenure',p:'TEN',w:.1,bn:4,st:[['Dossier Opened',14,2],['External Letters',60,2],['Dept Vote',21,4],['Divisional Review',30,5],['CAP Review',60,6],['Dean Recommendation',21,6],['President / Provost Decision',45,7]]},
 {id:'pro',n:'Promotion to Full Professor',s:'Promotion',p:'PRO',w:.08,bn:1,st:[['Nomination',14,4],['Letters',45,2],['Dept Vote',21,4],['Dean Review',30,6],['CAP Review',45,6],['Decision',30,7]]},
 {id:'sab',n:'Sabbatical / Research Leave',s:'Sabbatical',p:'SAB',w:.2,bn:4,st:[['Request',10,0],['Chair Approval',14,4],['Division Review',14,5],['Dean Approval',14,6],['Funding & Coverage',21,1],['Confirmed',7,2]]},
 {id:'ret',n:'Faculty Retirement',s:'Retirement',p:'RET',w:.06,bn:2,st:[['Notice Received',7,1],['Terms Review',21,2],['Benefits Handoff',30,1],['Emeritus Appt.',21,6],['Transition Plan',30,4],['Closed',7,2]]},
 {id:'nl',n:'Non-Ladder Reappointment',s:'Non-Ladder',p:'NLR',w:.2,bn:2,st:[['Review Notice',14,1],['Dept Evaluation',30,4],['Division Review',21,5],['Dean Approval',14,6],['Contract Issued',14,2]]},
 {id:'loa',n:'Leave of Absence',s:'Leave',p:'LOA',w:.1,bn:3,st:[['Request',7,0],['Chair Review',10,4],['Dean Approval',14,6],['Coverage Plan',21,1],['Active / Return',14,2]]},
-{id:'out',n:'Outside Activity Disclosure',s:'Outside Act.',p:'OAD',w:.06,bn:4,st:[['Disclosure Filed',7,0],['Conflict Screen',14,2],['Chair Review',14,4],['Dean Determination',21,6],['Mgmt Plan',30,3]]}];
+{id:'out',n:'Outside Activity Disclosure',s:'Outside Act.',p:'OUT',w:.06,bn:4,st:[['Disclosure Filed',7,0],['Conflict Screen',14,2],['Chair Review',14,4],['Dean Determination',21,6],['Mgmt Plan',30,3]]}];
 const TIERS=[['T0','Stage owner',null,'Auto-reminder at 75% of SLA'],['T1','Sr Assoc Dean',3,'Direct nudge + packet check'],['T2','Divisional Dean',5,'Drafted memo + call'],['T3','Dean for Faculty Affairs and Planning',6,'Dean’s desk review'],['T4','Provost',7,'Briefing + waiver decision']];
 const TMUL=[0,1,1.5,2,3];
+
+/* Sample case id: module - department - number.
+   HIR search, TEN tenure, PRO promotion, SAB sabbatical, RET retirement,
+   NLR non-ladder, LOA leave, OUT outside activity. */
+const DEPT3={
+  'African & African American Studies':'AAS','Anthropology':'ANT','Art, Film, & Visual Studies':'AFV','Astronomy':'AST',
+  'Celtic Lang. & Lit.':'CEL','Chemistry & Chemical Biology':'CCB','Classics':'CLA','Cmte · Env. Science & Public Policy':'ESP',
+  'Cmte · Folklore & Mythology':'FLK','Cmte · History & Literature':'HIL','Cmte · Social Studies':'SST','Cmte · Women, Gender & Sexuality':'WGS',
+  'Cmte · Ethnicity, Migration, Rights':'EMR','Cmte · Medieval Studies':'MED','Cmte · Religion':'REL','Comparative Literature':'CMP',
+  'Earth & Planetary Sciences':'EPS','East Asian Lang. & Civ.':'EAL','Economics':'ECO','English':'ENG','Expository Writing':'EXW',
+  'First-Year Seminar Program':'FYS','Germanic Lang. & Lit.':'GER','Government':'GOV','History':'HIS','History of Art & Architecture':'HAA',
+  'History of Science':'HOS','Human Evolutionary Biology':'HEB','Linguistics':'LIN','Mathematics':'MAT','Molecular & Cellular Biology':'MCB',
+  'Music':'MUS','Near Eastern Lang. & Civ.':'NEC','Organismic & Evol. Biology':'OEB','Philosophy':'PHI','Physics':'PHY',
+  'Program in General Education':'GEN','Psychology':'PSY','Romance Lang. & Lit.':'RLL','SEAS':'SEA','Slavic Lang. & Lit.':'SLA',
+  'Sociology':'SOC','South Asian Studies':'SAS','Statistics':'STA','Stem Cell & Regenerative Biology':'SCR','Theater, Dance & Media':'TDM'
+};
+const MODNAME={HIR:'Search and hiring',TEN:'Tenure review',PRO:'Promotion to full professor',SAB:'Sabbatical or research leave',RET:'Retirement',NLR:'Non-ladder reappointment',LOA:'Leave of absence',OUT:'Outside activity'};
+function dept3(d){ return (d && DEPT3[d.n]) || ('D'+String(d&&d.i||0).padStart(2,'0')); }
+function caseTag(W, deptIndex, num){ return W.p+'-'+dept3(DEPTS[deptIndex])+'-'+num; }
+function caseGloss(id){
+  var p=String(id||'').split('-');
+  if(p.length<3) return '';
+  var dept=Object.keys(DEPT3).filter(function(n){ return DEPT3[n]===p[1]; })[0] || p[1];
+  return (MODNAME[p[0]]||p[0])+' · '+dept+' · sample '+p.slice(2).join('-');
+}
+function deptBits(list, limit){
+  var m={};
+  (list||[]).forEach(function(c){
+    var k=(DEPTS[c.d]&&DEPTS[c.d].n)||'';
+    if(k) m[k]=(m[k]||0)+1;
+  });
+  var keys=Object.keys(m).sort(function(a,b){ return m[b]-m[a]; });
+  var n=limit||4;
+  if(!keys.length) return '';
+  return keys.slice(0,n).map(function(k){ return k+' '+m[k]; }).join(', ')+(keys.length>n?'…':'');
+}
 
 /* cases */
 const CASES=[],CM={};
@@ -3721,11 +3805,11 @@ for(let k=0;k<380;k++){
  const days=Math.round(sla*(hot?1.15+rnd()*1.9:Math.pow(rnd(),1.5)*1.5));
  const hist=[];for(let q=0;q<stg;q++)hist.push(Math.round(W.st[q][1]*(.45+rnd()*.9)));
  const ra=days/sla,risk=cl(Math.round(ra*48+rnd()*14+(wi===1||wi===2?8:0)),3,99);
- const c={id:W.p+'-'+(1000+k),wi,d:pickD(),stg,days,sla,hist,risk,actioned:false,closed:false};
+ const di=pickD(),c={id:caseTag(W,di,1000+k),wi,d:di,stg,days,sla,hist,risk,actioned:false,closed:false};
  CASES.push(c);CM[c.id]=c}
 (()=>{let z=424242,id=2000;const r2=()=>{z=(z*16807)%2147483647;return(z-1)/2147483646};
  WF.forEach((W,wi)=>W.st.forEach((s,si)=>{let n=CASES.filter(c=>c.wi===wi&&c.stg===si).length;while(n<4){const sla=s[1],days=Math.round(sla*(.15+r2()*.7)),hist=[];for(let q=0;q<si;q++)hist.push(Math.round(W.st[q][1]*(.45+r2()*.9)));
-  const rr=r2()*DWT[DWT.length-1],ra=days/sla,c={id:W.p+'-'+(id++),wi,d:Math.max(0,DWT.findIndex(x=>x>=rr)),stg:si,days,sla,hist,risk:cl(Math.round(ra*48+r2()*14),3,62),actioned:false,closed:false};CASES.push(c);CM[c.id]=c;n++}}))})();
+  const rr=r2()*DWT[DWT.length-1],di=Math.max(0,DWT.findIndex(x=>x>=rr)),ra=days/sla,num=id++,c={id:caseTag(W,di,num),wi,d:di,stg:si,days,sla,hist,risk:cl(Math.round(ra*48+r2()*14),3,62),actioned:false,closed:false};CASES.push(c);CM[c.id]=c;n++}}))})();
 const wf=c=>WF[c.wi],dp=c=>DEPTS[c.d],stN=c=>WF[c.wi].st[c.stg][0],oi=c=>WF[c.wi].st[c.stg][2],own=c=>ROLES[oi(c)][0],ratio=c=>c.days/c.sla;
 const isExc=c=>!c.closed&&!c.actioned&&ratio(c)>1;
 const tier=c=>{const r=ratio(c);return r<=1?0:r<=1.5?1:r<=2?2:r<=3?3:4};
@@ -3822,7 +3906,7 @@ function caseM(id,rep){const c=CM[id];if(!c)return;const W=wf(c),names=W.st.map(
  const tiersF=flow(TIERS.map(x=>x[1]),c.closed?-1:t,{sub:TMUL.map((m,i)=>i===0?`≤ ${c.sla}d`:`> ${Math.round(c.sla*m)}d`)});
  const nxt=ra<=.8?['Stay silent — on track',92]:ra<=1?['Pre-stage packet + notify owner',90]:ra<=1.5?['Nudge owner; offer alternate reviewer',86]:ra<=2?['Escalate to Div Dean with drafted memo',82]:['Escalate to the Dean for Faculty Affairs and Planning; propose reassignment / waiver',78];
  const conf=cl(Math.round(nxt[1]-(c.risk>85?3:0)),60,97);
- openM(c.id,`${esc(W.n)} · ${esc(dp(c).n)} · ${chip(c.closed?'Closed':'Risk '+c.risk,c.closed?'var(--ok)':sc(c.risk))}${c.actioned?' '+chip('AI action sent','var(--ai)'):''}`,
+ openM(c.id,`${esc(caseGloss(c.id))} · ${esc(dvName[dp(c).div]||'')} · ${chip(c.closed?'Closed':'Risk '+c.risk,c.closed?'var(--ok)':sc(c.risk))}${c.actioned?' '+chip('AI action sent','var(--ai)'):''}`,
  sec('Workflow position',flow(names,cur,{sub:W.st.map(s=>RN[s[2]])}))+
  `<div class="two">${sec('Stage duration vs SLA (| = SLA)',hb(rows))}${sec('Owner routing chain',flow(chain.map(i=>RN[i]),0))+sec('If stuck — escalation tiers',tiersF)}</div>`+
  `<div class="two">${sec('AI recommended next action',`<div class="draft">${esc(nxt[0])}</div>`)}${sec('Confidence',gauge(conf))}</div>`+
@@ -4004,7 +4088,7 @@ function respHTML(r){return `<div class="card resp2"><div class="q">${esc(r.q)}<
  <div class="acts">${(r.acts||[]).map(a=>`<button class="btn${a[2]?' ai':''}"${A(a[1])}>${a[0]}</button>`).join('')}<span class="mut">AI confidence ${r.conf}% · Scope: ${esc(r.scope||'FAS-wide')} · Sources: ${r.src.join(', ')}</span></div></div>`}
 const SUG=[['Cases & SLAs',['Which cases are past SLA?','Tenure pipeline status','Where are bottlenecks by owner?','Forecast slips next 30 days','Compare divisions']],['Workforce',['Ladder headcount outlook to 2030','Retirement outlook','Gender representation trend','What if we freeze hiring?']],['Compliance & email',['Compliance weak spots','Draft an exec email on tenure']]];
 function doAsk(q){q=(q||'').trim();if(!q)return;const s=q.toLowerCase(),O=scoped(),E=O.filter(isExc);let r;
- const late=cs=>cs.filter(isExc).length,exTb=cs=>({h:['Case','Workflow','Stage','Days over SLA'],r:cs.map(c=>({a:'case|'+c.id,c:[c.id,wf(c).s,esc(stN(c)),c.days>c.sla?`+${c.days-c.sla} days`:'—']}))}),
+ const late=cs=>cs.filter(isExc).length,exTb=cs=>({h:['Case','Department','Workflow','Stage','Days over SLA'],r:cs.map(c=>({a:'case|'+c.id,c:[c.id,esc(dp(c).n),wf(c).s,esc(stN(c)),c.days>c.sla?`+${c.days-c.sla} days`:'—']}))}),
   stagesOf=(wi,L)=>WF[wi].st.map((x,i)=>{const a=L.filter(c=>c.stg===i);return {l:x[0],ok:a.length-late(a),late:late(a),a:`stage|${wi}|${i}`}}),
   byDiv=cs=>DIVS.map(d=>{const a=cs.filter(c=>dp(c).div===d.id);return {l:d.n,ok:a.length-late(a),late:late(a),a:`pfset||${d.id}`}}).filter(x=>x.ok+x.late),
   worst=rows=>rows.slice().sort((a,b)=>b.late-a.late)[0],sg=n=>(n>=0?'+':'')+fx(n);
@@ -4068,7 +4152,7 @@ V.ro=()=>{const D=DEPTS.filter(inScopeD).map(d=>{const cs=CASES.filter(c=>!c.clo
  return `<div class="g g21"><div>${card('Department aggregates, '+(D[0]&&D[0].v.cur?CURY+' (predicted)':HY[NH-1]+' extract')+' <small>click row to drill</small>',`<div class="bar"><button class="pill${S.rocur!==false?' on':''}"${A('rocur|1')}>Now (${CURY}, predicted)</button><button class="pill${S.rocur===false?' on':''}"${A('rocur|0')}>${HY[NH-1]} extract</button><span class="mut">Age 60+ is the ${HY[NH-1]} extract in both views.</span></div>`+`<div style="overflow-x:auto"><table class="t"><caption>Department aggregates. ${D[0]&&D[0].v.cur?CURY+' model, except Age 60+, which is the '+HY[NH-1]+' extract.':HY[NH-1]+' extract. Active cases and exceptions are sample.'}</caption><thead><tr>${th('name','Department')}<th>Div</th>${th('ladder','Ladder')}${th('non','Non-ladder')}${th('women','Women % (ladder)')}${th('foc','FoC % (ladder)')}${th('a60','Age 60+ %')}${th('e1','Exp. exits (1 yr)')}${th('act','Active cases')}${th('ex','Exceptions')}</tr></thead><tbody>${D.map(x=>`<tr${A('dept|'+x.d.i)}><td>${esc(x.d.n)}</td><td>${chip(x.d.div,dc(x.d.div))}</td><td><b>${x.v.L}</b></td><td>${x.v.N}</td><td>${x.v.L?x.v.w+'%':'—'}</td><td>${x.v.L?x.v.f+'%':'—'}</td><td>${x.v.L?x.v.a60+'% <small>Extract '+HY[NH-1]+'</small>':'—'}</td><td>${x.v.e1.toFixed(1)}</td><td>${x.act}</td><td class="${x.ex?'bad':''}">${x.ex}</td></tr>`).join('')}</tbody></table></div>`)}</div><div class="g">${card('Faculty by division (incl. visiting)',stack)}${card('Totals in scope',tiles([['Ladder',fmt(L),'var(--crim)'],['Non-ladder',fmt(N),'var(--blue)'],['Women (ladder)',fp(wp),'var(--ai)'],['Faculty of color (ladder)',fp(fq),'var(--ok)']]))}${card((RH.div_lad?'Ladder history by division':'Ladder history')+' <small>click a year</small>',lc({labels:HY,a:'yr',h:190,series:RH.div_lad?['AH','SS','SCI','SEAS'].map(d=>({n:dvName[d],c:dvCol[d],v:RH.div_lad[d]})):[{n:scopeLbl(),c:'#a51c30',v:RH.ladder}]}))}</div></div>`};
 V.sp=()=>{const ph=[['Mobilize','var(--crim)',0,2],['Design & align','var(--blue)',2,2],['Integrate & pilot','var(--ai)',4,2],['Scale & optimize','var(--ok)',6,2]];
  const grid=`<div class="p8"><div></div>${ph.map(p=>`<div class="ph" style="grid-column:span ${p[3]};background:${p[1]}">${p[0]}</div>`).join('')}<div></div>${QS.map(q=>`<div class="hd">${q}</div>`).join('')}${LANES.map((l,li)=>`<div style="font-weight:600;color:${l[1]}">${l[0]}</div>${QS.map((q,qi)=>`<div>${MSL.map((m,mi)=>m[0]===li&&m[1]===qi?`<div class="ms"${A('ms|'+mi)} style="--c:${l[1]}">${m[2]}</div>`:'').join('')}</div>`).join('')}`).join('')}</div>`;
- const rk=`<div class="rk"><div></div><div class="hd">Low</div><div class="hd">Medium</div><div class="hd">High</div>${[2,1,0].map(im=>`<div class="hd">${['Low','Med','High'][im]} imp.</div>${[0,1,2].map(lk=>`<div style="background:color-mix(in srgb,var(--bad) ${(im+lk)*12}%,var(--soft))">${RISKS.map((r,i)=>r[1]===lk&&r[2]===im?`<span class="chip lk"${A('risk|'+i)} style="--c:var(--bad)">R${i+1}</span>`:'').join(' ')}</div>`).join('')}`).join('')}</div><div class="mut" style="margin-top:3px">${RISKS.map((r,i)=>`R${i+1} ${r[0]}`).join(' · ')}</div>`;
+ const rk=`<div class="rk"><div></div><div class="hd">Low</div><div class="hd">Medium</div><div class="hd">High</div>${[2,1,0].map(im=>`<div class="hd">${['Low','Med','High'][im]} imp.</div>${[0,1,2].map(lk=>`<div style="background:color-mix(in srgb,var(--bad) ${(im+lk)*12}%,var(--soft))">${RISKS.map((r,i)=>r[1]===lk&&r[2]===im?`<span class="chip lk"${A('risk|'+i)} style="--c:var(--bad)">R${i+1}</span>`:'').join(' ')}</div>`).join('')}`).join('')}</div><div class="mut" style="margin-top:3px">${RISKS.map((r,i)=>`R${i+1} ${r[0]}`).join(' · ')}</div><p class="mut">Illustrative merger sketch. The office register, with the line that changes each score, is the Risk register page.</p>`;
  const gov=`<div class="gv">${GOV.map((g,i)=>`<div class="gb2"${A('gov|'+i)}><b>${g[0]}</b><small>${g[1]}</small></div>${i<GOV.length-1?'<span class="arr">▾</span>':''}`).join('')}</div>`;
  return `<div class="bar">${DRV.map((d,i)=>`<button class="pill"${A('drv|'+i)}><b>${d[0]}</b> ${d[1]}</button>`).join('')}<button class="btn ai" style="margin-left:auto"${A('em|exec|plan')}>✉ Draft exec update</button></div>${card('Merger roadmap: Faculty Affairs + Finance + Academic Affairs <small>click milestone</small>',grid)}<div class="g g2" style="margin-top:8px">${card('Risk matrix (likelihood × impact)',rk)}${card('Governance',gov)}</div>`};
 function sigCounts(){const sc2=S.f.div||S.f.dept!==''||S.f.wf,c=sc2?[0,0,0,0,0]:SBASE.slice();SIGS.filter(sigIn).forEach(s=>c[s.st]++);return c}
@@ -7152,19 +7236,282 @@ function psFrame(){
     + '<section><b>A division uses its own total</b><p>The mitigation is the same four labels in that division. The department name stays.</p></section>'
     + '</div>'+psOpsNav()+'</div>';
 }
-function psMitigate(){
-  return psHead('Risks','Each risk has an owner and a next step.','These are the risks the file can name. A question from the framework stays a question until it has a count.')
-    + '<div class="pbinf"><ol class="pbinf-rules">'
-    + '<li><span>1</span><div><b>Plan FY2026 and FY2027 from the forecast</b><small>Kwok Yu · data and appointments</small><p>FY2026 starts from 744, the latest reported ladder total. FY2027 is the model year after it. Department history stays on the series in the file.</p></div></li>'
-    + '<li><span>2</span><div><b>A search is authorized with no funding source</b><small>Dean for Faculty Affairs and Planning, with Finance</small><p>The exception names the academic need and where the recurring dollars come from. The 195 thousand dollar unit cost stays an assumption. Lever shares stay scenarios.</p></div></li>'
-    + '<li><span>3</span><div><b>A 2026 approval is treated as a 2026 start</b><small>Zoë Fonseca-Kelly · when the letter is drafted</small><p>Write 2027–28 unless the offer letter gives another start. The replacement queue is the 28 and then 19 retirements.</p></div></li>'
-    + '<li><span>4</span><div><b>A report count is used as a cut</b><small>Faculty Affairs analyst · each scorecard review</small><p>Women on the ladder and faculty of color stay counts. They stay off the exit model and off any deficit cut.</p></div></li>'
-    + '<li><span>5</span><div><b>The only copy of a published count is one browser</b><small>Whoever types the count · every week</small><p>Generate full report on a set day. At day 90 the Oracle script holds the count, with a name and a time. Until the feed exists, say that the browser and Oracle are two copies.</p></div></li>'
-    + '<li><span>6</span><div><b>Teaching shifts onto the ladder</b><small>The seat that owns 2027–28 coverage</small><p>The cited cut is 25% of non-tenure-track faculty budgets. Build the coverage plan from courses and leaves. Leave the unpublished headcount drop unmarked, or mark the −15% figure as an assumption.</p></div></li>'
-    + '<li><span>7</span><div><b>The next published total moves the forecast</b><small>Kwok Yu · when FAS next publishes a total</small><p>Start the path again at that total. FY2026 and FY2027 stay the two planning years until then.</p></div></li>'
-    + '<li><span>8</span><div><b>Someone saves over the shared file</b><small>Dean’s office · this quarter</small><p>Keep the HTML in a versioned folder. One person saves. A download on one laptop is that laptop’s copy.</p></div></li>'
-    + '</ol>'+psOpsNav()+'</div>';
+var RR_BAND='all';
+var RR=[
+  {id:'RSK-FUND-02', name:'A search is authorized with no funding source', cat:'Search', layer:'Published',
+    where:'FAS-wide',
+    cause:'The ladder is 13 higher than the prior published year, and the structural deficit is $365M. The 195 thousand dollar unit cost on the funding screen is an assumption.',
+    event:'An exception is authorized with the academic need named and the recurring dollars unnamed.',
+    effect:'A recurring cost is added against the deficit with no source.',
+    owner:'Dean for Faculty Affairs and Planning, with Finance',
+    il:4, ii:4, control:'How we work says every exception names a source. This file has no gate that stops a blank source.', controlSt:'Missing',
+    rl:4, ri:4, treat:'Reduce', action:'Name the academic need and the recurring source before the exception is authorized.', when:'At the exception',
+    kri:'Authorized exceptions with a named source', now:'This file has no count of authorized exceptions.',
+    line:'One exception with a blank source keeps the score at 16. A gate that refuses a blank source would drop likelihood from 4 to 2.',
+    review:'This week', go:'positions', goLabel:'Open position funding'},
+  {id:'RSK-FCST-01', name:'FY2026 is planned from the extract instead of 744', cat:'Data', layer:'Published',
+    where:'FAS-wide. The August 2024 extract’s 2024–25 ladder is 729. The 2024–25 annual report is 730: Arts and Humanities 193, Social Sciences 237, Science 204, SEAS 96.',
+    cause:'Three ladder totals sit in this file: 729 in the August 2024 extract, 730 in the 2024–25 annual report, and 744 from the 2 December 2025 faculty meeting.',
+    event:'A search conversation uses 729 or 730 as the current ladder.',
+    effect:'FY2026 starts at the wrong total, and FY2027, the model year after it, moves with it.',
+    owner:'Kwok Yu · data and appointments',
+    il:4, ii:4, control:'Faculty snapshot and How we work use 744 for a FAS-wide sentence. The older totals stay on the page as history.', controlSt:'Partial',
+    rl:3, ri:4, treat:'Reduce', action:'Before a search conversation, say FY2026 starts at 744 and FY2027 is the model.', when:'Before any search talk',
+    kri:'The number in the FAS-wide sentence', now:'The snapshot sentence is 744: 565 tenured and 179 tenure-track, faculty meeting of 2 December 2025.',
+    line:'A briefing that uses 729 or 730 as the current ladder moves likelihood from 3 back to 4.',
+    review:'Before the next search conversation', go:'forecast', goLabel:'Open the forecast'},
+  {id:'RSK-COVR-06', name:'2027–28 coverage is planned from an unpublished drop', cat:'Coverage', layer:'Assumption',
+    where:'FAS-wide. A 25% cut in non-tenure-track faculty budgets is cited, and the source is still to confirm. The headcount drop is not published.',
+    cause:'The model uses a −15% stand-in for that cut. The stand-in is an assumption.',
+    event:'A staffing note treats −15% or 25% as a headcount the office can plan from.',
+    effect:'2027–28 courses are planned from a number this file does not have.',
+    owner:'The seat that owns 2027–28 coverage',
+    il:4, ii:4, control:'The −15% figure is labeled an assumption. On a sample card, the coverage desk will not continue a leave until the course has a cover and the grant stays on the grant. That gate is a sample. It is not a 2027–28 course list.', controlSt:'Partial',
+    rl:3, ri:4, treat:'Reduce', action:'Build the 2027–28 plan from courses and leaves. Do not enter a headcount drop.', when:'Before 2027–28 staffing',
+    kri:'Whether the coverage plan names courses, or names a percent', now:'No 2027–28 course list is in this file. The −15% figure is marked as an assumption.',
+    line:'A staffing note that uses −15% or 25% as a headcount moves likelihood from 3 to 4.',
+    review:'Before 2027–28 staffing', go:'cover', goLabel:'Open the coverage desk'},
+  {id:'RSK-DATA-05', name:'The only copy of a typed count is one browser', cat:'Data', layer:'This computer',
+    where:'The browser that typed a published count. 744 and 565 are in the file and survive a cleanup.',
+    cause:'A number typed on this page is stored in this browser. This file does not read FAS_FA_oracle_published.sql.',
+    event:'Cookies and site data are cleared, or a private window closes, before Generate full report.',
+    effect:'The typed count is gone. The page reopens on the figures in the file.',
+    owner:'Whoever types the count',
+    il:5, ii:3, control:'The instruction is to generate the full report every week, and again before a cleanup. This page does not record the date of the last download.', controlSt:'Partial',
+    rl:4, ri:3, treat:'Reduce', action:'Generate the full report on a set day, and again before any browser cleanup. Email that file to the Data Admin.', when:'Every week, and before a cleanup',
+    kri:'Days since the last full report was saved', now:'The last download is not recorded on this page.',
+    line:'More than 7 days, or a cleanup with no file, moves likelihood from 4 to 5.',
+    review:'Every week', go:'index', goLabel:'Open Home'},
+  {id:'RSK-REPT-04', name:'A report count is used as a cut', cat:'Report', layer:'Published',
+    where:'FAS-wide scorecard',
+    cause:'Women on the ladder and faculty of color are counts on the scorecard.',
+    event:'Either count is used as an input to the exit model, or as the basis of a deficit cut.',
+    effect:'A descriptive count is treated as a reason to cut.',
+    owner:'Faculty Affairs analyst · each scorecard review',
+    il:3, ii:5, control:'The exit model states that gender and race are not inputs. The operating rule keeps both counts off any cut.', controlSt:'Working',
+    rl:2, ri:5, treat:'Reduce', action:'At each scorecard review, leave both counts off the exit model and off any cut.', when:'Each scorecard review',
+    kri:'Whether gender or race is an exit-model input', now:'The model sheet says gender and race are not inputs.',
+    line:'Either count in a cut memo moves likelihood from 2 to 4. Impact stays 5.',
+    review:'Each scorecard review', go:'analytics', goLabel:'Open the scorecard'},
+  {id:'RSK-HIRE-03', name:'A 2026 approval is treated as a 2026 start', cat:'Search', layer:'Published',
+    where:'The replacement queue. Retirements from the December 2025 meeting are 28, then 19, against a typical 12. This file does not split those retirements by department.',
+    cause:'The freeze path says a 2026 approval is a 2027–28 start unless the offer letter says otherwise.',
+    event:'A letter leaves the start year blank, or a chair counts the start in 2026–27.',
+    effect:'Coverage and the model year are planned a year early.',
+    owner:'Zoë Fonseca-Kelly · when the letter is drafted',
+    il:4, ii:3, control:'The start-year rule is written beside the 28, the 19, and the typical 12. This file does not hold the letters.', controlSt:'Partial',
+    rl:3, ri:3, treat:'Reduce', action:'Write 2027–28 on the letter unless the letter gives another start.', when:'When the letter is drafted',
+    kri:'Letters in this cycle with a start year written', now:'No offer letters are in this file. The published queue is 28, then 19, against a typical 12.',
+    line:'One letter with no start year moves likelihood from 3 to 4.',
+    review:'When the letter is drafted', go:'forecast', goLabel:'Open the forecast'},
+  {id:'RSK-FILE-08', name:'Someone saves over the shared file', cat:'File', layer:'This computer',
+    where:'The shared folder that holds the HTML file',
+    cause:'The platform is one HTML file. A download is that laptop’s copy. Notes typed in a browser do not travel inside the file.',
+    event:'A person saves their copy over the shared folder.',
+    effect:'The next person opens a different file. Browser notes do not come with it.',
+    owner:'Dean’s office · this quarter',
+    il:3, ii:3, control:'The instruction is a versioned folder and one person saving. This page cannot see the folder.', controlSt:'Missing',
+    rl:3, ri:3, treat:'Reduce', action:'Keep the HTML in a versioned folder. One person saves.', when:'This quarter',
+    kri:'One named file and one saver in the shared folder', now:'This running copy is the demonstration file. The folder rule is not recorded here.',
+    line:'Two files with the same name in the shared folder moves likelihood from 3 to 4.',
+    review:'This quarter', go:'delivery', goLabel:'Open the 90-day pilot'},
+  {id:'RSK-PUBL-07', name:'The next published total does not become the anchor', cat:'Data', layer:'Published',
+    where:'FAS-wide',
+    cause:'The forecast stays on 744 until someone starts the path again.',
+    event:'FAS publishes a new ladder total and FY2026 and FY2027 are not restarted from it.',
+    effect:'The two planning years disagree with the newest report.',
+    owner:'Kwok Yu · when FAS next publishes a total',
+    il:3, ii:4, control:'The rule names Kwok Yu as the person who restarts the path. No date for the next publication is in this file.', controlSt:'Partial',
+    rl:2, ri:4, treat:'Reduce', action:'On the day a new total is published, start FY2026 at that total and recompute FY2027.', when:'When FAS next publishes a total',
+    kri:'Snapshot sentence versus the forecast anchor', now:'Both are 744.',
+    line:'Any gap between them moves likelihood from 2 to 5.',
+    review:'When FAS next publishes a total', go:'start', goLabel:'Open data reconciliation'}
+];
+function rrLword(n){ return ['','Rare','Unlikely','Possible','Likely','Almost certain'][n]||''; }
+function rrIword(n){ return ['','Notice','Limited','Moderate','Major','Severe'][n]||''; }
+function rrScore(r){ return r.rl*r.ri; }
+function rrBand(s){
+  if(s>=15) return {k:'esc', n:'Escalate', d:'The Dean for Faculty Affairs sees it this week.'};
+  if(s>=10) return {k:'out', n:'Outside appetite', d:'Treat it before the next search conversation.'};
+  if(s>=5) return {k:'watch', n:'Watch', d:'Stay on the review named on the card.'};
+  return {k:'in', n:'Inside appetite', d:'Review it next quarter.'};
 }
+function rrMove(r){
+  var a=r.il*r.ii, b=rrScore(r);
+  if(a===b) return 'The control has not moved the score. It is still '+a+'.';
+  var bits=[];
+  if(r.rl!==r.il) bits.push('likelihood from '+r.il+' ('+rrLword(r.il)+') to '+r.rl+' ('+rrLword(r.rl)+')');
+  if(r.ri!==r.ii) bits.push('impact from '+r.ii+' ('+rrIword(r.ii)+') to '+r.ri+' ('+rrIword(r.ri)+')');
+  return 'The control '+(b<a?'lowered':'raised')+' the score from '+a+' to '+b+' by changing '+bits.join(' and ')+'.';
+}
+function rrSorted(){ return RR.slice().sort(function(a,b){ return rrScore(b)-rrScore(a)||a.id.localeCompare(b.id); }); }
+function rrBits(obj){
+  return Object.keys(obj).sort(function(a,b){ return obj[b]-obj[a]||a.localeCompare(b); }).map(function(k){ return k+' '+obj[k]; }).join(', ');
+}
+function rrClocks(){
+  if(typeof CASES==='undefined' || typeof WF==='undefined') return [];
+  return WF.map(function(w, wi){
+    var cs=CASES.filter(function(c){ return !c.closed && c.wi===wi && c.days>2*c.sla; });
+    if(!cs.length) return null;
+    var stages={};
+    cs.forEach(function(c){
+      var st=w.st[c.stg], name=st[0], role=(typeof ROLES!=='undefined' && ROLES[st[2]])? ROLES[st[2]][1] : 'Owner to confirm';
+      if(!stages[name]) stages[name]={n:0, sla:st[1], role:role, divs:{}, depts:{}, worst:c};
+      var s=stages[name]; s.n++;
+      var d=DEPTS[c.d], div=(typeof dvName!=='undefined' && dvName[d.div])||d.div;
+      s.divs[div]=(s.divs[div]||0)+1;
+      s.depts[d.n]=(s.depts[d.n]||0)+1;
+      if((c.days-c.sla)>(s.worst.days-s.worst.sla)) s.worst=c;
+    });
+    var order=Object.keys(stages).sort(function(a,b){ return stages[b].n-stages[a].n; });
+    return {id:'CLK-'+w.p, code:w.p, name:w.n, n:cs.length, stages:order.map(function(k){ return Object.assign({name:k}, stages[k]); })};
+  }).filter(Boolean).sort(function(a,b){ return b.n-a.n; });
+}
+function rrCard(r){
+  var s=rrScore(r), b=rrBand(s);
+  return '<article class="rrcard" id="'+r.id+'">'
+    + '<div class="rrcardhead"><div><span class="rrid">'+esc(r.id)+'</span><h3>'+esc(r.name)+'</h3>'
+    + '<p class="rrnote">'+esc(r.cat)+' · '+esc(r.layer)+' · '+esc(r.where)+'</p></div>'
+    + '<div class="rrscore '+b.k+'"><b>'+s+'</b><em>'+esc(b.n)+'</em></div></div>'
+    + '<div class="rrbow"><div><b>Cause</b><p>'+esc(r.cause)+'</p></div><div><b>Event</b><p>'+esc(r.event)+'</p></div><div><b>Consequence</b><p>'+esc(r.effect)+'</p></div></div>'
+    + '<p class="rrdrop">'+esc(rrMove(r))+' Inherent '+r.il+'×'+r.ii+' ('+rrLword(r.il)+' × '+rrIword(r.ii)+'). Residual '+r.rl+'×'+r.ri+' ('+rrLword(r.rl)+' × '+rrIword(r.ri)+'). Control: '+esc(r.controlSt)+'.</p>'
+    + '<p class="rrmeta"><span><b>Owner.</b> '+esc(r.owner)+'</span><span><b>Treatment.</b> '+esc(r.treat)+'</span><span><b>Review.</b> '+esc(r.review)+'</span><span><b>Direction.</b> Flat</span></p>'
+    + '<p class="rrdrop"><b>Next step.</b> '+esc(r.action)+' <b>When.</b> '+esc(r.when)+'</p>'
+    + '<div class="rrkri"><div><b>Reading now · '+esc(r.kri)+'</b><p>'+esc(r.now)+'</p></div><div><b>Line that changes the score</b><p>'+esc(r.line)+'</p></div></div>'
+    + '<div class="rracts"><button type="button" class="psbutton primary" data-a="psRisk|'+r.id+'">Open the record</button>'
+    + '<button type="button" class="psbutton" data-a="psRiskGo|'+r.go+'">'+esc(r.goLabel)+'</button></div></article>';
+}
+function rrHeat(list){
+  var rows='', L, I;
+  for(L=5;L>=1;L--){
+    var cells='<div class="rrlab">'+L+' '+rrLword(L)+'</div>';
+    for(I=1;I<=5;I++){
+      var score=L*I, band=rrBand(score);
+      var here=list.filter(function(r){ return r.rl===L && r.ri===I; });
+      cells+='<div class="rrcell '+band.k+'"><small>'+score+'</small>'
+        + here.map(function(r){ return '<button type="button" data-a="psRisk|'+r.id+'" aria-label="'+esc(r.id+' '+r.name+' residual '+rrScore(r))+'">'+esc(r.id.replace('RSK-',''))+'</button>'; }).join('')
+        + '</div>';
+    }
+    rows+='<div class="rrrow">'+cells+'</div>';
+  }
+  var head='<div class="rrrow rrhead"><div>Likelihood</div>'+[1,2,3,4,5].map(function(n){ return '<div>'+n+'<br>'+rrIword(n)+'</div>'; }).join('')+'</div>';
+  return '<div class="rrheatwrap"><div class="rrheat" role="group" aria-label="Residual likelihood by impact. '+list.length+' standing risks.">'+head+rows+'</div></div>'
+    + '<div class="rrlegend"><span class="rrcell esc">15–25 Escalate</span><span class="rrcell out">10–14 Outside appetite</span><span class="rrcell watch">5–9 Watch</span><span class="rrcell in">1–4 Inside appetite</span></div>'
+    + '<p class="rrnote">Rows run from almost certain down to rare. Columns run from a notice to a severe consequence. The faint number is likelihood times impact. A chip is the residual position after the control. Appetite bands are settings on this page, not an FAS policy.</p>';
+}
+function rrClockCard(c){
+  var top=c.stages[0], ex=top.worst, d=DEPTS[ex.d], div=(typeof dvName!=='undefined' && dvName[d.div])||d.div, place=(div && div!==d.n)? (d.n+' · '+div) : d.n;
+  var stageHtml=c.stages.map(function(s){
+    return '<div class="rrbow rrone"><div><b>'+esc(s.name)+' · '+s.n+(s.n===1?' case':' cases')+'</b><p>Target '+s.sla+' days. Twice the target is '+(s.sla*2)+' days. Role: '+esc(s.role)+'.</p></div>'
+      + '<div><b>Divisions</b><p>'+esc(rrBits(s.divs))+'</p></div>'
+      + '<div><b>Departments</b><p>'+esc(rrBits(s.depts))+'</p></div></div>';
+  }).join('');
+  return '<article class="rrcard">'
+    + '<div class="rrcardhead"><div><span class="rrid">'+esc(c.id)+'</span><h3>'+esc(c.name)+'</h3>'
+    + '<p class="rrnote">Sample · '+c.n+' sample case'+(c.n===1?'':'s')+' beyond twice a stage target. Not Harvard’s queue.</p></div>'
+    + '<div class="rrscore watch"><b>'+c.n+'</b><em>Sample</em></div></div>'
+    + stageHtml
+    + '<p class="rrdrop"><b>Example '+esc(ex.id)+'.</b> '+esc(place)+' · '+ex.days+' days in '+esc(top.name)+' · '+(ex.days-ex.sla)+' days past the '+top.sla+'-day target. The id is module, department, sample number. No faculty member is named.</p>'
+    + '<div class="rracts"><button type="button" class="psbutton primary" data-a="psRisk|'+c.id+'">Open every sample id</button>'
+    + '<button type="button" class="psbutton" data-a="opCase|'+ex.id+'">Open '+esc(ex.id)+'</button>'
+    + '<button type="button" class="psbutton" data-a="psRiskGo|follow">Open Action follow-up</button></div></article>';
+}
+function rrPage(){
+  var all=rrSorted(), clocks=rrClocks();
+  var counts={esc:0,out:0,watch:0,in:0};
+  all.forEach(function(r){ counts[rrBand(rrScore(r)).k]++; });
+  var shown=all.filter(function(r){ return RR_BAND==='all' || rrBand(rrScore(r)).k===RR_BAND; });
+  var tiles=[['all','Standing risks', all.length,'Cause, event, consequence'],
+    ['esc','Escalate', counts.esc,'Score 15–25'],
+    ['out','Outside appetite', counts.out,'Score 10–14'],
+    ['watch','Watch', counts.watch,'Score 5–9']].map(function(t){
+      return '<button type="button" data-a="psRiskBand|'+(RR_BAND===t[0]?'all':t[0])+'" class="'+(RR_BAND===t[0]?'on':'')+'" aria-pressed="'+(RR_BAND===t[0])+'"><b>'+t[2]+'</b><span>'+t[1]+'</span><small>'+t[3]+'</small></button>';
+    }).join('');
+  var empty=shown.length? '' : '<p class="rrnote">Nothing in this band. The lowest standing score is '+rrScore(all[all.length-1])+' on '+esc(all[all.length-1].id)+'.</p>';
+  return psHead('Risk register','What would move the score.','Each standing risk is a cause, an event, and a consequence. The heat map is the residual score after the control. Sample stage clocks sit below the map and are not an FAS queue.')
+    + '<div class="pbinf"><p class="pbinf-one">ISO 31000 keeps the record: scenario, control, residual score, owner, review. The monitor is the line under each card. When the reading crosses that line, the score changes.</p>'
+    + '<div class="rrcounts">'+tiles+'</div>'
+    + '<div class="rrlayout"><section class="pscard"><span class="pskicker">Residual heat map · likelihood × impact</span><h2>After the control.</h2>'+rrHeat(all)+'</section>'
+    + '<section class="pscard"><span class="pskicker">How a score is set</span><h2>1 to 5, anchored to this office.</h2>'
+    + '<p>Likelihood is the chance during this planning year. Impact is what changes if it happens. Neither axis is a measured probability.</p>'
+    + '<div class="rrscale"><p><b>Likelihood.</b> 1 Rare, not seen in the last two published cycles. 2 Unlikely, seen once or only as a cited note. 3 Possible, the cause and the control are both in this file. 4 Likely, the condition is the current state. 5 Almost certain, it is true on this page now.</p>'
+    + '<p><b>Impact.</b> 1 Notice, one briefing is wrong. 2 Limited, one department plans the wrong year. 3 Moderate, a typed count is lost or a letter starts a year early. 4 Major, an FAS-wide sentence uses the wrong total, or coverage is planned from a number this file does not have. 5 Severe, a published count is used as a cut.</p>'
+    + '<p><b>Id.</b> RSK is the register. FCST, FUND, HIRE, REPT, DATA, COVR, PUBL, and FILE name the subject. The last two digits are the record. No earlier review is stored here, so every direction is flat.</p></div></section></div>'
+    + '<h2 class="pbinf-h">The register'+(RR_BAND==='all'?'':' · '+esc(rrBand(RR_BAND==='esc'?16:RR_BAND==='out'?12:RR_BAND==='watch'?6:2).n))+'</h2>'
+    + empty + '<div class="rrcards">'+shown.map(rrCard).join('')+'</div>'
+    + '<h2 class="pbinf-h">Sample stage clocks</h2>'
+    + '<p class="rrnote">These are the illustrative portfolio. A case is listed when the days in its current stage are more than twice that stage’s target. Do not quote the counts as Harvard’s queue. They are not on the heat map, because a sample clock is not an FAS residual risk.</p>'
+    + '<div class="rrcards">'+(clocks.length? clocks.map(rrClockCard).join('') : '<p class="rrnote">No sample case is beyond twice its stage target.</p>')+'</div>'
+    + psOpsNav()+'</div>';
+}
+function rrOpen(id){
+  if(String(id).indexOf('CLK-')===0){ rrOpenClock(id); return; }
+  var r=RR.filter(function(x){ return x.id===id; })[0]; if(!r) return;
+  var s=rrScore(r), b=rrBand(s);
+  PS.module=null;
+  openM(r.id, esc(r.name)+' · residual '+s+' · '+esc(b.n),
+    '<p class="psdetaillead">'+esc(r.cause)+'</p>'
+    + '<div class="rrbow"><div><b>Cause</b><p>'+esc(r.cause)+'</p></div><div><b>Event</b><p>'+esc(r.event)+'</p></div><div><b>Consequence</b><p>'+esc(r.effect)+'</p></div></div>'
+    + '<div class="psdetailgrid"><section><h3>Inherent, before the control</h3><p>Likelihood '+r.il+' · '+rrLword(r.il)+'. Impact '+r.ii+' · '+rrIword(r.ii)+'. Score '+ (r.il*r.ii) +'.</p></section>'
+    + '<section><h3>Residual, after the control</h3><p>Likelihood '+r.rl+' · '+rrLword(r.rl)+'. Impact '+r.ri+' · '+rrIword(r.ri)+'. Score '+s+'. '+esc(b.d)+'</p></section>'
+    + '<section><h3>Control · '+esc(r.controlSt)+'</h3><p>'+esc(r.control)+'</p></section>'
+    + '<section><h3>What moved</h3><p>'+esc(rrMove(r))+'</p></section>'
+    + '<section><h3>Owner and treatment</h3><p>'+esc(r.owner)+'. '+esc(r.treat)+'. Review '+esc(r.review)+'.</p></section>'
+    + '<section><h3>Next step</h3><p>'+esc(r.action)+' '+esc(r.when)+'.</p></section>'
+    + '<section><h3>Reading now</h3><p>'+esc(r.kri)+'. '+esc(r.now)+'</p></section>'
+    + '<section><h3>Line that changes the score</h3><p>'+esc(r.line)+'</p></section></div>'
+    + '<p class="psdetailfoot">'+esc(r.id)+' · '+esc(r.cat)+' · '+esc(r.layer)+'. RSK is the register, the middle token is the subject, and the number is the record. Direction is flat because no earlier review is stored on this page.</p>'
+    + '<div class="rracts"><button type="button" class="psbutton primary" data-a="psRiskGo|'+r.go+'">'+esc(r.goLabel)+'</button></div>', true);
+}
+function rrOpenClock(id){
+  var c=rrClocks().filter(function(x){ return x.id===id; })[0]; if(!c) return;
+  var rows=c.stages.map(function(s){
+    var list=CASES.filter(function(x){
+      return !x.closed && x.id.indexOf(c.code+'-')===0 && x.days>2*x.sla && WF[x.wi].st[x.stg][0]===s.name;
+    }).sort(function(a,b){ return (b.days-b.sla)-(a.days-a.sla); });
+    var body=list.map(function(x){
+      var d=DEPTS[x.d], div=(dvName&&dvName[d.div])||d.div;
+      return '<tr><td><button type="button" class="pstextbutton" data-a="opCase|'+x.id+'">'+esc(x.id)+'</button></td><td>'+esc(d.n)+'</td><td>'+esc(div)+'</td><td>'+esc(s.name)+'</td><td>'+x.days+'</td><td>'+(x.days-x.sla)+'</td></tr>';
+    }).join('');
+    return '<h3>'+esc(s.name)+' · target '+s.sla+' days · twice is '+(s.sla*2)+' · '+esc(s.role)+'</h3>'
+      + '<div class="tw"><table class="t"><caption>Sample ids in '+esc(s.name)+'. Not a Harvard queue.</caption><thead><tr><th>Sample id</th><th>Department</th><th>Division</th><th>Stage now</th><th>Days in stage</th><th>Past target</th></tr></thead><tbody>'+body+'</tbody></table></div>';
+  }).join('');
+  PS.module=null;
+  openM(c.id, 'Sample · '+esc(c.name)+' · '+c.n+' beyond twice a stage target',
+    '<p class="psdetaillead">Illustrative portfolio. Do not quote these counts as Harvard’s queue. No faculty member is named.</p>'+rows
+    + '<p class="psdetailfoot">The id is module, department, sample number. '+esc(c.code)+' is '+esc((typeof MODNAME!=='undefined' && MODNAME[c.code])||c.name)+'.</p>', true);
+}
+function rrSheetRows(){
+  var head=['id','category','where','cause','event','consequence','owner','inherent likelihood','inherent impact','inherent score','control','control status','residual likelihood','residual impact','residual score','band','treatment','next step','when','indicator','reading now','line that changes the score','review','layer'];
+  var rows=[head];
+  rrSorted().forEach(function(r){
+    var s=rrScore(r), b=rrBand(s);
+    rows.push([r.id,r.cat,r.where,r.cause,r.event,r.effect,r.owner,r.il,r.ii,r.il*r.ii,r.control,r.controlSt,r.rl,r.ri,s,b.n,r.treat,r.action,r.when,r.kri,r.now,r.line,r.review,r.layer]);
+  });
+  return rows;
+}
+function rrClockRows(){
+  var rows=[['sample id','workflow','department','division','stage now','stage target days','days in stage','days past target','responsible role','layer']];
+  rrClocks().forEach(function(c){
+    c.stages.forEach(function(s){
+      CASES.filter(function(x){ return !x.closed && x.id.indexOf(c.code+'-')===0 && x.days>2*x.sla && WF[x.wi].st[x.stg][0]===s.name; })
+        .sort(function(a,b){ return (b.days-b.sla)-(a.days-a.sla); })
+        .forEach(function(x){
+          var d=DEPTS[x.d];
+          rows.push([x.id, c.name, d.n, (dvName&&dvName[d.div])||d.div, s.name, s.sla, x.days, x.days-x.sla, s.role, 'Sample']);
+        });
+    });
+  });
+  rows.push(['Note','','','','','','','','','Illustrative portfolio. Not Harvard operational status. No faculty member is named.']);
+  return rows;
+}
+function rrMini(){
+  return '<div class="ankind">'+rrSorted().map(function(r){
+    var s=rrScore(r), b=rrBand(s);
+    return '<div class="anflag"><span class="anf-z">'+s+'</span><span><b>'+esc(r.id)+' · '+esc(r.name)+'</b><small>'+esc(b.n)+' · '+esc(r.owner)+' · '+esc(r.now)+'</small></span><span class="anf-m">'+esc(r.rl)+'×'+esc(r.ri)+'</span></div>';
+  }).join('')+'</div>';
+}
+function psMitigate(){ return rrPage(); }
 function psQpath(){
   return psHead('Quarter plan','This quarter, in order.','The same path in every division. Day 90 is the gate for a shared published count. Year at a glance is the calendar.')
     + '<div class="pbinf"><ol class="pbinf-rules">'
@@ -7215,7 +7562,7 @@ function psModalA11y(){const e=document.getElementById('modal'),mc=e.querySelect
 closeM=function(all){psOldCloseM(all);if(!MS.length)PS.module=null};
 function psPaint(){psNavigation();const body={start:psStart,faculty:psFaculty,plan:psPlan,delivery:psDelivery,operate:psOperate,frame:psFrame,mitigate:psMitigate,qpath:psQpath,explore:psExplore}[PS.page]();document.getElementById('view').innerHTML=`<div class="pswrap"><div class="pstop"><span>Faculty Affairs Operations Platform / ${PSPAGES.find(x=>x[0]===PS.page)[1]}</span><span>Harvard Faculty of Arts & Sciences · demonstration dataset</span></div>${body}<footer class="psfooter"><span>Created by Narissa Khomkhai · demonstration dataset</span><span>Historical evidence ≠ current roster · models ≠ decisions</span></footer></div>`}
 render=function(){if(PS.module&&MS.length){const id=TABS.some(t=>t[0]===S.tab)?S.tab:PS.module;PS.module=id;const t=TABS.find(t=>t[0]===id);MS[0]={title:t[1],sub:'Supporting tool · source labels apply',html:psModuleHTML(id)};if(MS.length===1)showM();return}psPaint()};
-const psOldAct=act;act=function(p){switch(p[0]){case'psPage':PS.page=p[1];PS.module=null;closeM(1);history.replaceState(null,'','#'+PS.page);psPaint();window.scrollTo(0,0);return;case'psDetail':psDetail(p[1]);return;case'psMetric':PS.metric=p[1];psPaint();return;case'psWindow':PS.window=+p[1];psPaint();return;case'psLibrary':PS.library=p[1];PS.query='';psPaint();return;case'psModule':psModule(p[1]);return;case'psPoint':psPoint(p[1],+p[2]);return;case'psDeadline':psDeadline(+p[1]);return;case'tab':if(PS.module||MS.length){psModule(p[1]);return}break;case'v8SaveDecision':psOldAct(p);if(!MS.length)psModule('sh');return}return psOldAct(p)};
+const psOldAct=act;act=function(p){switch(p[0]){case'psPage':PS.page=p[1];PS.module=null;closeM(1);history.replaceState(null,'','#'+PS.page);psPaint();window.scrollTo(0,0);return;case'psDetail':psDetail(p[1]);return;case'psMetric':PS.metric=p[1];psPaint();return;case'psWindow':PS.window=+p[1];psPaint();return;case'psLibrary':PS.library=p[1];PS.query='';psPaint();return;case'psModule':psModule(p[1]);return;case'psPoint':psPoint(p[1],+p[2]);return;case'psDeadline':psDeadline(+p[1]);return;case'psRisk':rrOpen(p[1]);return;case'psRiskBand':RR_BAND=p[1]||'all';psPaint();return;case'psRiskGo':closeM(1);act(['pbNav',p[1]]);return;case'tab':if(PS.module||MS.length){psModule(p[1]);return}break;case'v8SaveDecision':psOldAct(p);if(!MS.length)psModule('sh');return}return psOldAct(p)};
 document.addEventListener('input',e=>{if(e.target.id==='ps-search'){PS.query=e.target.value;document.getElementById('ps-library').innerHTML=psLibrary()}if(e.target.id==='ps-hiring'){PS.mult=[0,.5,.75,1,1.25,1.5][+e.target.value];const temp=document.createElement('div');temp.innerHTML=psPlan();document.querySelector('.psscenario').innerHTML=temp.querySelector('.psscenario').innerHTML;document.querySelector('label[for="ps-hiring"]').innerHTML=temp.querySelector('label[for="ps-hiring"]').innerHTML;document.querySelector('.psgrid > section:nth-child(2)').innerHTML=temp.querySelector('.psgrid > section:nth-child(2)').innerHTML}});
 function psReadPoint(e){const p=e.target.closest('[data-ps-point]');if(!p)return;const[k,n]=p.dataset.psPoint.split('|'),i=+n,t=k==='trend'?psTrend():{labels:FY,values:REAL.SC[PS.mult+'|hist'].lad.m},out=document.getElementById('ps-'+k+'-readout');if(out)out.innerHTML=esc(t.labels[i])+': <b>'+psN(t.values[i])+'</b> · '+(k==='trend'?'historical extract':'conditional forecast')+' · select for detail'}
 document.addEventListener('pointerover',psReadPoint);document.addEventListener('focusin',psReadPoint);
@@ -7319,13 +7666,13 @@ function opStrip(cs){const n=opCounts(cs);return `<div class="opstrip" role="img
 function opStats(cs){const n=opCounts(cs);return `<div class="opstats">${[['Active cases',n.n,'Sample workload'],['Past stage target',n.late,'Sample exceptions'],['Beyond 2× target',n.severe,'Sample priority'],['Within target',n.n?Math.round(n.on/n.n*100)+'%':'—','Sample stage timing']].map(([l,v,d])=>`<div><span>${l}</span><strong>${v}</strong><small>${d}</small></div>`).join('')}</div>`}
 function opLanes(){return `<div class="oplanes">${WF.map(w=>{const cs=opCases(w.id),n=opCounts(cs);return `<button class="oplane" data-a="opWorkflow|${w.id}"><span><b>${esc(w.n)}</b><small>${n.n} active · ${n.late} past target · Sample</small></span><span>${opStrip(cs)}<small>${n.n?Math.round(n.on/n.n*100)+'% within target':'View process'} →</small></span></button>`}).join('')}</div>`}
 function opQueue(topic='all'){return opCases(topic).filter(c=>c.days>c.sla).sort((a,b)=>(b.days-b.sla)-(a.days-a.sla))}
-function opRisks(limit=6,topic='all'){const cs=opQueue(topic).slice(0,limit);return cs.length?`<div class="opriskrows">${cs.map(c=>`<button data-a="opCase|${c.id}"><span class="opflag">+${c.days-c.sla}d</span><span><b>${esc(WF[c.wi].s)} · ${esc(c.id)}</b><small>${esc(WF[c.wi].st[c.stg][0])} · ${esc(ROLES[WF[c.wi].st[c.stg][2]]?.[1]||'Owner to confirm')} · Sample</small></span><span>Review blocker →</span></button>`).join('')}</div>`:'<p>Sample queue is empty for this filter.</p>'}
+function opRisks(limit=6,topic='all'){const cs=opQueue(topic).slice(0,limit);return cs.length?`<div class="opriskrows">${cs.map(c=>`<button data-a="opCase|${c.id}"><span class="opflag">+${c.days-c.sla}d</span><span><b>${esc(c.id)}</b><small>${esc(DEPTS[c.d].n)} · ${esc(dvName[DEPTS[c.d].div]||'')} · ${esc(WF[c.wi].st[c.stg][0])} · ${esc(ROLES[WF[c.wi].st[c.stg][2]]?.[1]||'Owner to confirm')} · Sample</small></span><span>Review blocker →</span></button>`).join('')}</div>`:'<p>Sample queue is empty for this filter.</p>'}
 function opLibrary(){const group=OPG.find(x=>x[0]===OPS.group),q=PS.query.toLowerCase(),list=TABS.filter(t=>(!group[2]||group[2].includes(t[0]))&&(!q||(t[1]+' '+(XDL[t[0]]?.[1]||'')).toLowerCase().includes(q)));const pages=Math.max(1,Math.ceil(list.length/9));OPS.page=Math.min(OPS.page,pages-1);return list.slice(OPS.page*9,OPS.page*9+9).map(t=>`<button class="pstool" data-a="psModule|${t[0]}"><span class="pspill">${esc(XDL[t[0]]?.[0]||'Reference')}</span><b>${esc(t[1])} →</b><small>${esc((XDL[t[0]]?.[1]||'Open working view').slice(0,100))}</small></button>`).join('')+`<div class="oppager"><span>${list.length} tools · page ${OPS.page+1} of ${pages}</span><button data-a="opPage|-1" ${OPS.page===0?'disabled':''}>Previous</button><button data-a="opPage|1" ${OPS.page===pages-1?'disabled':''}>Next</button></div>`}
 psLibrary=opLibrary;
 psExplore=function(){return `<div class="ophead"><div><span class="psbadge">Operations overview</span><h1>Faculty Affairs at a glance</h1><p>Workload → exceptions → accountable next action.</p></div>${psBtn('psModule|em','Prepare visual email brief ↗')}</div><div class="optoolbar"><div class="psswitch">${[['overview','Operations'],['risks','Flags & risks'],['tools','Explore tools']].map(([k,l])=>`<button data-a="opTab|${k}" class="${OPS.tab===k?'on':''}" aria-pressed="${OPS.tab===k}">${l}</button>`).join('')}</div><button class="opmode" data-a="opDemo" aria-pressed="${OPS.demo}">${OPS.demo?'Sample preview ON':'Sample figures shown'} · switch</button></div><p class="opsource">${OPS.demo?'Illustrative case portfolio · sample counts and stage targets, not Harvard operational status.':'Sample counts stay on the page. The live case feed is not connected, so these figures are synthesized and must not be quoted as Harvard status.'}</p>${OPS.tab==='tools'?`<div class="opgroups">${OPG.map(g=>`<button data-a="opGroup|${g[0]}" aria-pressed="${OPS.group===g[0]}" class="${OPS.group===g[0]?'on':''}">${g[1]}</button>`).join('')}</div><label for="ps-search">Find a tool</label><input id="ps-search" class="pssearch" placeholder="Search all tools in this category" value="${esc(PS.query)}"><div class="pslibrary" id="ps-library">${opLibrary()}</div>`:opStats(opCases())+(OPS.tab==='overview'?`<div class="opsection"><h2>Operations portfolio</h2><span><i class="opdot"></i> Within target <i class="opdot amber"></i> Past target</span></div>${opLanes()}<div class="opsection"><h2>Priority exceptions</h2>${psBtn('opTab|risks','View risk queue →')}</div>${opRisks(2)}`:`<div class="opsection"><h2>Longest-overdue cases</h2><span>Ranked by days beyond the sample stage target</span></div>${opRisks()}<div class="oprisknote"><b>Decision rule</b> Confirm the blocker and current owner before escalating. Timing flags identify a review need; they do not establish the cause.</div><div class="oplinks">${psBtn('psModule|kp','Indicator monitor →')}${psBtn('psModule|sh','Decision agenda →')}${psBtn('psModule|es','Escalation pathways →')}</div>`)}`};
-function opWorkflow(id){const w=WF.find(x=>x.id===id),cs=opCases(id);PS.module=null;openM(w.n,'Illustrative workflow · sample cases and stage targets',opStats(cs)+`<h2>Stage workload</h2><div class="opstages">${w.st.map((s,i)=>{const n=cs.filter(c=>c.stg===i).length;return `<div><b>${i+1}. ${esc(s[0])}</b><strong>${n}</strong><small>${esc(ROLES[s[2]]?.[1]||'Owner to confirm')} · target ${s[1]} days · Sample</small><meter min="0" max="${Math.max(1,cs.length)}" value="${n}">${n}</meter></div>`}).join('')}</div><h2>Exceptions requiring review</h2>${opRisks(4,id)}<div class="oplinks">${psBtn('opMailTopic|'+id,'Prepare this workflow’s visual brief')}${psBtn('psPage|roadmap','Handbook & deadlines →')}</div>`,true)}
-function opCase(id){const c=CASES.find(x=>x.id===id);if(!c)return;const w=WF[c.wi],s=w.st[c.stg];PS.module=null;openM(id+' · '+w.s,'Illustrative case · review prompt',`<div class="opcase"><div><small>Elapsed in stage</small><strong>${c.days}d</strong></div><div><small>Sample target</small><strong>${c.sla}d</strong></div><div><small>Beyond target</small><strong>+${Math.max(0,c.days-c.sla)}d</strong></div></div><h2>${esc(s[0])}</h2><p>Responsible role: <b>${esc(ROLES[s[2]]?.[1]||'To confirm')}</b></p><div class="oprisknote"><b>Recommended next action</b>Confirm the missing input or decision with this role; record an agreed completion date. Escalate if the responsible role cannot resolve the dependency.</div><p>The sample records do not document the reason for this delay. Ask for the blocker rather than infer it from elapsed time.</p>${psBtn('opMailTopic|'+w.id,'Prepare workflow brief →')}`,true)}
-function opMailBody(){const cs=opCases(OPS.mailTopic),n=opCounts(cs),w=WF.find(x=>x.id===OPS.mailTopic),top=opQueue(OPS.mailTopic).slice(0,3);return `<div class="opmailbody" id="op-mail-body"><p style="font-size:12px;color:#94611d">SAMPLE · synthesized case data, not Harvard operational status</p><h2>${esc(w?.n||'Faculty Affairs operations')}</h2>${opStats(cs)}<h3>Stage timing</h3>${opStrip(cs)}<p>${n.on} within target · ${n.late} past target · ${n.severe} beyond 2× target · Sample</p><h3>Priority review</h3><table class="opmailtable"><thead><tr><th>Case / workflow</th><th>Beyond target</th><th>Responsible role</th></tr></thead><tbody>${top.map(c=>`<tr><td>${esc(c.id)}<br>${esc(WF[c.wi].s)}</td><td><b>+${c.days-c.sla} days</b></td><td>${esc(ROLES[WF[c.wi].st[c.stg][2]]?.[1]||'To confirm')}</td></tr>`).join('')||'<tr><td colspan="3">Sample queue is empty for this filter.</td></tr>'}</tbody></table><div class="oprisknote"><b>Requested action</b><span id="op-mail-action-preview">${esc(OPS.mailAction)}</span></div><p style="font-size:12px;color:#667">Source: embedded illustrative case portfolio. Stage targets are sample assumptions. Review and verify before sharing.</p></div>`}
+function opWorkflow(id){const w=WF.find(x=>x.id===id),cs=opCases(id);PS.module=null;openM(w.n,'Illustrative workflow · sample cases and stage targets',opStats(cs)+`<h2>Stage workload</h2><div class="opstages">${w.st.map((s,i)=>{const n=cs.filter(c=>c.stg===i).length;return `<div><b>${i+1}. ${esc(s[0])}</b><strong>${n}</strong><small>${esc(ROLES[s[2]]?.[1]||'Owner to confirm')} · target ${s[1]} days · ${esc(deptBits(cs.filter(c=>c.stg===i),3)||'none')} · Sample</small><meter min="0" max="${Math.max(1,cs.length)}" value="${n}">${n}</meter></div>`}).join('')}</div><h2>Exceptions requiring review</h2>${opRisks(4,id)}<div class="oplinks">${psBtn('opMailTopic|'+id,'Prepare this workflow’s visual brief')}${psBtn('psPage|roadmap','Handbook & deadlines →')}</div>`,true)}
+function opCase(id){const c=CASES.find(x=>x.id===id);if(!c)return;const w=WF[c.wi],s=w.st[c.stg],d=DEPTS[c.d];PS.module=null;openM(c.id,'Sample case · '+caseGloss(c.id),`<div class="opcase"><div><small>Elapsed in stage</small><strong>${c.days}d</strong></div><div><small>Sample target</small><strong>${c.sla}d</strong></div><div><small>Beyond target</small><strong>+${Math.max(0,c.days-c.sla)}d</strong></div></div><h2>${esc(s[0])}</h2><p><b>${esc(d.n)}</b> · ${esc(dvName[d.div]||d.div)} · ${esc(w.n)}</p><p>The id is module, department, then sample number. ${esc(c.id.split('-')[0])} is ${esc(MODNAME[c.id.split('-')[0]]||w.s)}. ${esc(c.id.split('-')[1])} is ${esc(d.n)}.</p><p>Responsible role: <b>${esc(ROLES[s[2]]?.[1]||'To confirm')}</b></p><div class="oprisknote"><b>Recommended next action</b>Confirm the missing input or decision with this role; record an agreed completion date. Escalate if the responsible role cannot resolve the dependency.</div><p>The sample records do not document the reason for this delay. Ask for the blocker rather than infer it from elapsed time. This is not a named faculty member.</p>${psBtn('opMailTopic|'+w.id,'Prepare workflow brief →')}`,true)}
+function opMailBody(){const cs=opCases(OPS.mailTopic),n=opCounts(cs),w=WF.find(x=>x.id===OPS.mailTopic),top=opQueue(OPS.mailTopic).slice(0,3);return `<div class="opmailbody" id="op-mail-body"><p style="font-size:12px;color:#94611d">SAMPLE · synthesized case data, not Harvard operational status</p><h2>${esc(w?.n||'Faculty Affairs operations')}</h2>${opStats(cs)}<h3>Stage timing</h3>${opStrip(cs)}<p>${n.on} within target · ${n.late} past target · ${n.severe} beyond 2× target · Sample</p><h3>Priority review</h3><table class="opmailtable"><thead><tr><th>Case / workflow</th><th>Beyond target</th><th>Responsible role</th></tr></thead><tbody>${top.map(c=>`<tr><td>${esc(c.id)}<br>${esc(DEPTS[c.d].n)} · ${esc(WF[c.wi].s)}</td><td><b>+${c.days-c.sla} days</b></td><td>${esc(ROLES[WF[c.wi].st[c.stg][2]]?.[1]||'To confirm')}</td></tr>`).join('')||'<tr><td colspan="3">Sample queue is empty for this filter.</td></tr>'}</tbody></table><div class="oprisknote"><b>Requested action</b><span id="op-mail-action-preview">${esc(OPS.mailAction)}</span></div><p style="font-size:12px;color:#667">Source: embedded illustrative case portfolio. Stage targets are sample assumptions. Review and verify before sharing.</p></div>`}
 V.em=function(){return `<div class="opmailcontrols"><label>Workflow<select id="op-mail-topic">${[['all','Whole portfolio'],...WF.map(w=>[w.id,w.s])].map(([k,l])=>`<option value="${k}" ${OPS.mailTopic===k?'selected':''}>${esc(l)}</option>`).join('')}</select></label><label>Subject<input id="op-mail-subject" value="Faculty Affairs | ${esc(WF.find(w=>w.id===OPS.mailTopic)?.s||'Operations')} review | demonstration dataset"></label></div><div class="opmail-layout">${opMailBody()}<section class="opmailsettings"><h3>Requested action</h3><label for="op-mail-action">Edit the action shown in the brief</label><textarea id="op-mail-action" rows="5">${esc(OPS.mailAction)}</textarea><p>Copy the formatted brief into an email, or download the HTML version. Nothing is sent from this platform.</p>${psBtn('opMailCopy','Copy visual brief')}${psBtn('opMailDownload','Download email HTML')}<p id="op-mail-status" role="status"></p></section></div>`};
 function opMailExport(){const el=document.getElementById('op-mail-body').cloneNode(true),n=opCounts(opCases(OPS.mailTopic));el.removeAttribute('id');el.style.cssText='font-family:Arial,sans-serif;color:#173040;line-height:1.5;padding:24px';const stats=el.querySelector('.opstats');stats.outerHTML='<table role="presentation" width="100%" cellpadding="10" cellspacing="4"><tr>'+[...stats.children].map(d=>'<td width="25%" style="background:#f3f5f4;vertical-align:top;border:1px solid #ddd">'+[...d.children].map(e=>'<div style="font-size:'+(e.tagName==='STRONG'?'28':'12')+'px">'+esc(e.textContent)+'</div>').join('')+'</td>').join('')+'</tr></table>';el.querySelector('.opstrip').outerHTML='<table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td width="'+(n.n?n.on/n.n*100:100)+'%" bgcolor="'+(n.n?'#428275':'#e8e9e7')+'" height="14"></td>'+(n.late?'<td width="'+(n.late/n.n*100)+'%" bgcolor="#be8344" height="14"></td>':'')+'</tr></table>';el.querySelectorAll('th,td').forEach(e=>{if(e.closest('.opmailtable'))e.style.cssText='text-align:left;padding:12px 8px;border-bottom:1px solid #ddd;font-size:13px;vertical-align:top'});el.querySelector('.opmailtable').setAttribute('width','100%');el.querySelector('.opmailtable').style.borderCollapse='collapse';el.querySelector('.oprisknote').style.cssText='margin:20px 0;padding:16px;background:#f6f3ed;border-left:3px solid #b58142';el.querySelector('.oprisknote b').style.display='block';return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(document.getElementById('op-mail-subject').value)+'</title></head><body><table role="presentation" width="100%"><tr><td align="center"><table role="presentation" width="680" style="max-width:100%;width:100%;max-width:680px"><tr><td>'+el.outerHTML+'</td></tr></table></td></tr></table></body></html>'}
 
@@ -7692,18 +8039,35 @@ function buildRows(){
     WF.forEach(function(w,wi){
       var cs = opCases(w.id), cnt = opCounts(cs);
       if(!cnt.severe) return;
-      var stageCount = {};
-      cs.forEach(function(c){ if(c.days>2*c.sla) stageCount[c.stg]=(stageCount[c.stg]||0)+1; });
-      var worstStage = Object.keys(stageCount).sort(function(a,b){ return stageCount[b]-stageCount[a]; })[0];
-      var st = w.st[worstStage] || w.st[0];
-      var role = (ROLES[st[2]]||['Stage owner'])[0];
+      var late = cs.filter(function(c){ return c.days>2*c.sla; });
+      var stageMap = {};
+      late.forEach(function(c){
+        var name = w.st[c.stg][0];
+        (stageMap[name] = stageMap[name] || []).push(c);
+      });
+      var stageOrder = Object.keys(stageMap).sort(function(a,b){ return stageMap[b].length - stageMap[a].length; });
+      var divMap = {};
+      var roster = late.map(function(c){
+        var d = DEPTS[c.d] || {n:'', div:''};
+        var div = dvName[d.div] || d.div || '';
+        divMap[div] = (divMap[div] || 0) + 1;
+        return {id:c.id, stage:w.st[c.stg][0], days:c.days, sla:c.sla, over:c.days - c.sla, dept:d.n, div:div};
+      }).sort(function(a,b){ return b.over - a.over; });
+      var worst = w.st.filter(function(s){ return s[0]===stageOrder[0]; })[0] || w.st[0];
+      var role = (ROLES[worst[2]]||['Stage owner'])[0];
+      var stageTxt = stageOrder.map(function(name){
+        var sla = (w.st.filter(function(s){ return s[0]===name; })[0] || [])[1];
+        return stageMap[name].length+' in '+name+(sla? ' (target '+sla+' days, 2× is '+(sla*2)+')' : '');
+      }).join('; ');
+      var divTxt = Object.keys(divMap).sort(function(a,b){ return divMap[b]-divMap[a]; }).map(function(k){ return k+' '+divMap[k]; }).join(', ');
+      var sampleId = roster[0] ? roster[0].id : '';
       rows.push({
-        i:n++, band:'U1', date:null, state:cnt.severe+' '+(cnt.severe===1?'case':'cases')+' beyond 2× target',
+        i:n++, band:'U1', date:null, state:cnt.severe+' sample '+(cnt.severe===1?'case':'cases')+' beyond 2× the stage target',
         urgencyNote:'Illustrative portfolio',
         raci:{A:'Sr Assoc Dean', R:role, C:['Appts Office'], I:['Dean FA&P']},
-        raciWho:role, op:{n:w.n, s:'Stage: '+st[0]+' · target '+st[1]+' days.'}, opRaw:[],
-        cadence:{cycle:'Rolling', when:'Now', target:'Stage target '+st[1]+' days', sla:'2× target breached'},
-        title:w.n+' · stage target breached', kind:'case', wfId:w.id, severe:cnt.severe
+        raciWho:role, op:{n:w.n, s:stageTxt+'. '+divTxt+'.'+(sampleId? ' Example '+sampleId+'.' : '')+' The id is module, department, sample number. No faculty member is named.'}, opRaw:[],
+        cadence:{cycle:'Rolling', when:'Now', target:'Stage target '+worst[1]+' days', sla:'2× target breached'},
+        title:w.n+' · stage target breached', kind:'case', wfId:w.id, severe:cnt.severe, roster:roster
       });
     });
   }
@@ -7905,13 +8269,19 @@ function evcRowBody(i){
       + '</div><div class="ixfinding"><b>Decision gate</b>'+E(a.gate)+'</div>'
       + '<p class="psdetailfoot">This is the platform\'s own decision item, promoted to the executive view because it gates a resource or staffing decision.</p>';
   } else if(r.kind==='case'){
+    var roster = r.roster || [];
+    var rowsHtml = roster.map(function(c){
+      return '<tr><td>'+E(c.id)+'</td><td>'+E(c.div)+'</td><td>'+E(c.dept)+'</td><td>'+E(c.stage)+'</td><td>'+c.days+'</td><td>+'+c.over+'</td></tr>';
+    }).join('');
     body = '<p class="psdetaillead">'+E(r.state)+' in '+E(r.op.n)+'.</p>'
       + '<div class="psdetailgrid">'
-      + '<section><h3>Stage</h3><p>'+E(r.op.s)+'</p></section>'
+      + '<section><h3>Where they sit</h3><p>'+E(r.op.s)+'</p></section>'
       + '<section><h3>Proposed RACI</h3><p><b>A</b> '+E(r.raci.A)+' · <b>R</b> '+E(r.raci.R)+'</p></section>'
-      + '<section><h3>Recommended next action</h3><p>Confirm the blocker with the responsible role and record an agreed completion date. Escalate if that role cannot resolve the dependency.</p></section>'
-      + '<section><h3>What the data does not say</h3><p>The portfolio does not document why a case is late. Ask for the blocker rather than inferring it from elapsed time.</p></section>'
-      + '</div><p class="psdetailfoot">Illustrative case portfolio · sample counts and stage targets, not Harvard operational status.</p>';
+      + '<section><h3>What a department means here</h3><p>Each sample id is placed on a department from the faculty extract, weighted by that unit’s headcount. The department is not a live reappointment, and no faculty member is named.</p></section>'
+      + '<section><h3>What the clock means</h3><p>Days in stage are a sample clock. Past target is days beyond that stage’s own target. A row is on this list only after it passes twice that target.</p></section>'
+      + '</div>'
+      + (rowsHtml? '<p class="psdetailfoot">An id reads module-department-number. HIR search, TEN tenure, PRO promotion, SAB sabbatical, RET retirement, NLR non-ladder, LOA leave, OUT outside activity.</p><table class="t"><caption>Sample cases behind this line.</caption><thead><tr><th>Sample id</th><th>Division</th><th>Department</th><th>Stage now</th><th>Days in stage</th><th>Past target</th></tr></thead><tbody>'+rowsHtml+'</tbody></table>' : '')
+      + '<p class="psdetailfoot">Illustrative case portfolio · sample counts and stage targets, not Harvard operational status.</p>';
   } else {
     var t = TIERS[r.tierIndex];
     body = '<p class="psdetaillead">'+E(t[1])+' picks up the item once it passes '+(t[2]!=null?t[2]+'× its stage target':'the stage owner')+'.</p>'
@@ -9595,7 +9965,7 @@ function anRisk(){
     + '<div class="antile" style="--tc:#a51c30"><span>Unusual workforce observations</span><strong>'+flags.length+'</strong><small>Across 12 headline series over 22 years. '+(byLvl(flags))+' beyond 2.5 standard deviations.</small></div>'
     + '<div class="antile" style="--tc:#d97706"><span>Departments moving unusually</span><strong>'+dflags.length+'</strong><small>Headcount change far from the department\'s own history, and at least three people.</small></div>'
     + '<div class="antile" style="--tc:#2563eb"><span>Concentration index</span><strong>'+(hhi==null?'–':f0(hhi))+'</strong><small>Herfindahl-style sum of squared division shares. An exactly even split across four divisions would score '+f0(evenH)+', so the FAS is <b>'+concRead+'</b>.</small></div>'
-    + '<div class="antile" style="--tc:#6d5bd0"><span>Standing risks in the register</span><strong>'+((typeof RISKS!=='undefined')?RISKS.length:0)+'</strong><small>Each scored for likelihood and impact; exposure is the product.</small></div>'
+    + '<div class="antile" style="--tc:#6d5bd0"><span>Standing risks in the register</span><strong>'+(typeof rrSorted==='function'?rrSorted().length:(typeof RISKS!=='undefined'?RISKS.length:0))+'</strong><small>Residual likelihood times impact, after the control.</small></div>'
     + '</div>'
 
     + '<div class="ansec" style="margin-top:22px"><div class="ancard"><h3>Unusual patterns in the workforce series</h3>'
@@ -9617,15 +9987,11 @@ function anRisk(){
     + '<div class="annote'+(conc[0].share>35?' anwarn':'')+'"><b>Largest division holds '+p1(conc[0].share)+' of the ladder.</b> '
     + (conc[0].share>35? 'At this level, a division-level problem is an FAS-level problem, and an FAS total can move for reasons that do not apply anywhere else.' : 'Distribution is reasonably even, so FAS totals are less likely to be driven by one unit.')+'</div>'
     + '</div>'
-    + '<div class="ancard"><h3>Risk register · likelihood × impact</h3>'
-    + '<p>Standing risks carried by the platform, ranked by exposure.</p>'
-    + tbl(['Risk','Likelihood','Impact','Exposure'],
-        (typeof RISKS!=='undefined'? RISKS:[]).map(function(r){
-          var ex=r[1]*r[2];
-          return {c:[E(r[0]), r[1], r[2], '<b style="color:'+(ex>=3?'#a51c30':ex>=2?'#d97706':'#16a34a')+'">'+ex+'</b>']};
-        }).sort(function(a,b){ return 0; }))
-    + '<div class="annote anwarn"><b>Both axes are 0–2 judgements held in the platform, not measured probabilities.</b> They rank attention; they do not estimate likelihood.</div>'
-    + '<div style="margin-top:12px">'+link('cr','Open Compliance Radar')+' '+link('es','Open Escalation')+'</div>'
+    + '<div class="ancard"><h3>Risk register · residual score</h3>'
+    + '<p>Cause, event, and consequence, scored after the control. The line that would change each score is on the Risk register. Sample stage clocks are kept off this list.</p>'
+    + (typeof rrMini==='function'? rrMini() : '<p>Open the Risk register for the heat map.</p>')
+    + '<div class="annote"><b>Likelihood and impact are 1–5 judgements anchored on this page, not measured probabilities.</b> Residual score is the product. 15–25 is escalate, 10–14 is outside appetite, 5–9 is watch, 1–4 is inside appetite.</div>'
+    + '<div style="margin-top:12px"><button type="button" class="anlink" data-a="pbNav|mitigate">Open the Risk register →</button></div>'
     + '</div></div>';
 }
 
@@ -13811,17 +14177,8 @@ function pbOpSheets(){
       ['Division counts, annual report 2024–25','Arts and Humanities 193, Social Sciences 237, Science 204, SEAS 96. Sum 730. The College has no separate ladder total in that report.','Same four FAS figures in every division. The department name stays.','Arts and Humanities, Social Sciences, Science, SEAS, College'],
       ['Question','Outside offers, one data system, briefing hours, duplicate offices, hub and spoke, I-9, admin hiring, departures attributed to system friction, visa waits.','Each enters the plan when it has a count and an owner.','Ask the office that owns the count']
     ],
-    Risks:[
-      ['risk','mitigation','owner','when'],
-      ['Plan FY2026 and FY2027 from the forecast','FY2026 starts at 744. FY2027 is the model year after it.','Kwok Yu','Before any search talk'],
-      ['A search is authorized with no funding source','The exception names the academic need and the recurring dollars. The unit cost stays an assumption.','Dean for Faculty Affairs and Planning, with Finance','At the exception'],
-      ['A 2026 approval is treated as a 2026 start','Write 2027–28 unless the offer letter gives another start.','Zoë Fonseca-Kelly','When the letter is drafted'],
-      ['A report count is used as a cut','Women on the ladder and faculty of color stay counts.','Faculty Affairs analyst','Each scorecard review'],
-      ['The only copy of a published count is one browser','Generate full report on a set day. Oracle holds the count at day 90.','Whoever types the count','Every week'],
-      ['Teaching shifts onto the ladder','Build the 2027–28 coverage plan from courses and leaves. Mark −15% as an assumption.','The seat that owns 2027–28 coverage','Before 2027–28 staffing'],
-      ['The next published total moves the forecast','Start the path again at that total. FY2026 and FY2027 stay the planning years until then.','Kwok Yu','When FAS next publishes a total'],
-      ['Someone saves over the shared file','Keep the HTML in a versioned folder. One person saves.','Dean’s office','This quarter']
-    ],
+    Risks:(typeof rrSheetRows==='function'? rrSheetRows() : [['id'],['The register is not loaded']]),
+    Sample_stage_clocks:(typeof rrClockRows==='function'? rrClockRows() : [['note'],['The sample clocks are not loaded']]),
     Quarter_plan:[
       ['step','when','owner','what happens'],
       ['1','This week','Dean for Faculty Affairs and Planning','Open How we work with both associate deans. Pick one appointment process. Walk FY2026 and FY2027.'],
@@ -14012,7 +14369,7 @@ function pbTop(){
     delivery:'Try one job for 90 days. See what the file keeps, and what stays on this computer.',
     operate:'Five rules for this quarter: one roster, a named funding source, the freeze path, reports kept as reports, and a weekly save.',
     frame:'Strengths, weaknesses, opportunities, and threats, with questions left as questions.',
-    mitigate:'Each named risk has an owner and the step that limits it.',
+    mitigate:'Residual score after the control, and the line that would change it.',
     qpath:'This week, the 90 days, and what waits until a count exists.',
     roadmap:'Three calendars, one organized year',
     cover:'One card for teaching, the grant, service, and leave. Continue stays closed until the course is covered.'};
@@ -16813,7 +17170,7 @@ function pbEvxEmailLines(v){
       .sort(function(a,b){ return b[1].h/b[1].n-a[1].h/a[1].n; }).slice(0,3)
       .forEach(function(x){ out.push(x[0]+': '+x[1].h+' of '+x[1].n+' cases past target ('+(x[1].h/x[1].n*100).toFixed(1)+'%).'); });
     if(C.hit.length){ out.push('Furthest past target:');
-      C.hit.slice(0,5).forEach(function(c){ out.push('  '+c.id+' · '+(wf(c).s||wf(c).n)+' · '+stN(c)+' · '+c.days+' days against '+c.sla+' ('+ratio(c).toFixed(1)+'×) · '+own(c)); }); }
+      C.hit.slice(0,5).forEach(function(c){ out.push('  '+c.id+' · '+dp(c).n+' · '+(wf(c).s||wf(c).n)+' · '+stN(c)+' · '+c.days+' days against '+c.sla+' ('+ratio(c).toFixed(1)+'×) · '+own(c)); }); }
   } else {
     pbEvxByDiv(v.id).forEach(function(d){ out.push(d.l+': '+pbFmt(v,d.v)+(d.lvl>=2?' (outside line)':d.lvl>=1?' (watch line)':'')); });
   }
@@ -19618,7 +19975,7 @@ act=function(p){
     positions:['Lines and funding','Faculty lines, their funding source and the cost per hire.','Tiles count lines by status. The register lists each line with its funding; sample rows are tagged.',[['Finance outlook','pbPage|finance'],['2027–28 staffing','pbPage|capacity']]],
     strategy:['Outcomes, signals and benefits','What success looks like by 2030, the signals that show progress, and the benefits that follow.','Leading signals move first; lagging ones confirm. Each has a source and an owner.',[['Framework','pbPage|frame'],['Risks','pbPage|mitigate']]],
     frame:['SWOT by division','The same four questions for every division: strengths, weaknesses, opportunities and threats.','Read across a row to compare divisions. Open questions stay marked as questions.',[['Strategy','pbPage|strategy'],['Risks','pbPage|mitigate']]],
-    mitigate:['Risk register','Each named risk with its owner and the step that limits it.','Risks are listed most serious first. The step is the next action, not the full plan.',[['Strategy','pbPage|strategy'],['How we work','pbPage|operate']]],
+    mitigate:['Risk register','Each risk is a cause, an event, and a consequence, scored after the control.','The heat map is residual likelihood times impact. The line on each card is what would change the score. Sample stage clocks sit below the map and are not an FAS queue.',[['Strategy','pbPage|strategy'],['How we work','pbPage|operate']]],
     operate:['Operating rules','One roster, a named funding source, the freeze path, reports kept as reports, and a weekly save.','Each rule says what it means in practice and how to tell it is being followed.',[['Quarter plan','pbPage|qpath'],['Risks','pbPage|mitigate']]],
     delivery:['Pilot','Try one job for 90 days: what the file keeps, what stays on this computer, and how to judge it.','Read the three steps, then what lives in the file and what stays local.',[['How we work','pbPage|operate'],['Platform index','pbNav|index']]],
     views:['Every working view','Every dashboard, monitor, register and tool from the original platform, by the question it answers.','Each card shows where its data comes from. Click a card to open the view full width.',[['Contacts and RACI','pbPage|contacts'],['Platform index','pbNav|index']]],
